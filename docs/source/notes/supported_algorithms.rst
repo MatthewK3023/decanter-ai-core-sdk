@@ -61,22 +61,16 @@ Example Code
 	loop = asyncio.get_running_loop()
 	loop.is_running()
 
-``Create context to set the usr, pwd, host.``:
+``CoreClient handles the actions of calling api and getting the results.``:
+``and Create context to set the usr, pwd, host.``:
 
 .. code-block:: python
 
 	# enable default logger
 	core.enable_default_logger()
 	# set the username, password, host
-	context = core.Context.create(
+	client = core.CoreClient(
 	        username='{usr}', password='{pwd}', host='{decantercoreserver}')
-
-
-``CoreClient handles the actions of calling api and getting the results.``:
-
-.. code-block:: python
-
-	client = core.CoreClient
 
 
 ``Open train & test file``:
